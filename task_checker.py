@@ -37,7 +37,7 @@ CHANNEL_ID = 1340238761317105714 # Change this into Channel ID ng text channel
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix="!", intents=intents)
 
-@tasks.loop(minutes=30)  
+@tasks.loop(seconds=1)  
 async def check_tasks():
     now = datetime.datetime.now()
     current_time = now.strftime("%I:%M %p") 
